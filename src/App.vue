@@ -15,7 +15,7 @@ function load_iframe(url) {
 }
 
 async function refresh_iframe(){
-  iframe_url = 'http://' + input.value
+  iframe_url = 'https://' + input.value
   await load_iframe('about:blank')
   await load_iframe(iframe_url)
 
@@ -38,11 +38,11 @@ async function refresh_iframe(){
   <div id="header" class="py-5 px-5 flex flex-nowrap justify-between w-full bg-slate-200 bg-opacity-75 shadow-lg">
 
     <div class="flex w-10/12 bg-white rounded-md shadow-md">
-      <label for="input" class="mx-3">http://</label>
+      <label for="input" class="my-2 px-2">https://</label>
       <input type="url" name="input" v-model="input" @focus="valid_url = true" @keyup.enter="refresh_iframe" class="flex-grow rounded-r-md">
     </div>
 
-    <button @click="refresh_iframe" class="bg-pink-400 px-2 rounded-md shadow-md hover:bg-pink-500 active:shadow-sm active:bg-pink-600">Is It Gay?</button>
+    <button @click="refresh_iframe" class="bg-pink-400 px-3 rounded-md shadow-md hover:bg-pink-500 active:shadow-sm active:bg-pink-600">Is It Gay?</button>
 
   </div>
 
