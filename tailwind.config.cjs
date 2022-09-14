@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{vue,js,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fluidType: {
+        setings: {
+          prefix: 'fluid-',
+        }
+      }
+    },
   },
-  plugins: [],
+  plugins: [require('tailwind-fluid-typography')],
 }
